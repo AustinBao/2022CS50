@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+    Summary
+
+{% endblock %}
+
+{% block main %}
+<main class="container py-5 text-center">
+    <h1>Summary</h1>
+    <hr>
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-start">Day 1</th>
+
+                <th class="text-end">Name</th>
+                <th class="text-end">Period 1</th>
+                <th class="text-end">Period 2</th>
+                <th class="text-end">Period 3</th>
+                <th class="text-end">Period 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-start"></td>
+                {% for dict in day1user %}
+                    <td class="text-end">{{ dict }}</td>
+                {% endfor %}
+            </tr>
+            <tr>
+                <td class="text-start"></td>
+                {% for dict in day1friend %}
+                    <td class="text-end">{{ dict }}</td>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="text-start">Day 2</th>
+
+                <th class="text-end">Name</th>
+                <th class="text-end">Period 1</th>
+                <th class="text-end">Period 2</th>
+                <th class="text-end">Period 3</th>
+                <th class="text-end">Period 4</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-start"></td>
+                {% for dict in day2user %}
+                    <td class="text-end">{{ dict }}</td>
+                {% endfor %}
+            </tr>
+            <tr>
+                <td class="text-start"></td>
+                {% for dict in day2friend %}
+                    <td class="text-end">{{ dict }}</td>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+</main>
+<h4>Day 1 similar classes</h4>
+    {% if day1similar|length == 0 %}
+        <h6>NO MATCHING CLASSES</h6>
+    {% else %}
+        {% for class in day1similar %}
+            <h6>Period: {{ class.period }}, Class: {{ class.class }}</h6>
+        {% endfor %}
+    {% endif %}
+
+<h4>Day 2 similar classes</h4>
+    {% if day2similar|length == 0 %}
+        <h6>NO MATCHING CLASSES</h6>
+    {% else %}
+        {% for class in day2similar %}
+            <h6>Period: {{ class.period }}, {{ class.class }}</h6>
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}

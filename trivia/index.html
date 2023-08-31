@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <body>
+            <div class="header">
+                <h1>Trivia!</h1>
+            </div>
+
+            <div class="container">
+                <div class="section">
+                    <h2>Part 1: Multiple Choice </h2>
+                    <hr>
+                    <h3>
+                        Laughing causes your blood flow to increase by what percentage?
+                    </h3>
+                        <button id = 'ten' type='button'>10%</button>
+                        <button id = 'fifteen' type='button'>15%</button>
+                        <button id = 'twenty' type='button'>20%</button>
+
+                        <p id = 'feedbackMultipleChoice'></p>
+                </div>
+
+                <div class="section">
+                    <h2>Part 2: Free Response</h2>
+                    <hr>
+                    <h3>
+                        Between 2000 and 2015, the average global life expectancy increased by how many years? (answer should be an integer)
+                    </h3>
+                        <input autocomplete = 'off' id = 'triviatwo' type='text'>
+                        <button id = 'check'>Check Answer</button>
+
+                        <p id = 'feedbackWrittenResponse'></p>
+                </div>
+            </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(){
+                let incorrectOptionOne = document.querySelector('#ten');
+                let incorrectOptionTwo = document.querySelector('#fifteen');
+                let correct = document.querySelector('#twenty');
+
+                incorrectOptionOne.addEventListener("click", function(){
+                    incorrectOptionOne.style.backgroundColor = 'red';
+                    document.querySelector('#feedbackMultipleChoice').innerHTML = 'Incorrect';
+                })
+                incorrectOptionTwo.addEventListener("click", function(){
+                    incorrectOptionTwo.style.backgroundColor = 'red';
+                    document.querySelector('#feedbackMultipleChoice').innerHTML = 'Incorrect';
+                })
+                correct.addEventListener("click", function(){
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedbackMultipleChoice').innerHTML = 'Correct';
+                })
+            });
+            document.querySelector('#check').addEventListener('click', function(){
+                let input = document.getElementById('triviatwo');
+                if (input.value == '5'){
+                    input.style.backgroundColor = 'green';
+                    document.querySelector('#feedbackWrittenResponse').innerHTML = 'Correct';
+                }
+                else{
+                    input.style.backgroundColor = 'red';
+                    document.querySelector('#feedbackWrittenResponse').innerHTML = 'Incorrect';
+                }
+            });
+
+        </script>
+    </body>
+</html>

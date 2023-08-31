@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Home</title>
+    </head>
+    <body class = "backgroundwallpaper">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <div class="topnav" id="myTopnav">
+            <a href="http://127.0.0.1:8080/index.html" class="active">Home</a>
+            <a href="http://127.0.0.1:8080/intro.html">About Me</a>
+            <a href="http://127.0.0.1:8080/interesting.html">Odd Facts</a>
+            <a href="http://127.0.0.1:8080/hobby.html">Hobbies</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+            <script>
+            function myFunction() {
+            let x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+            </script>
+        </div>
+        <div class = "center">
+            <h1>About Me</h1>
+        </div>
+        <div class="row">
+            <div class="column">
+                <img src="https://cdn.discordapp.com/attachments/818605816948588554/1011300906752561294/me_1.jpg" alt="austin" style="width:100%">
+              </div>
+            <div class="column">
+              <img src="https://scontent.fyyc2-1.fna.fbcdn.net/v/t1.18169-9/24130020_1130990710365737_266351794762742579_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=e3f864&_nc_ohc=SYthLoMBZP4AX8-hljy&_nc_ht=scontent.fyyc2-1.fna&oh=00_AT9A0IV9a4T0x8FkIyT0UiA6YNLTHN8mQpLcZmPRLg5EGA&oe=6328C9E1" alt="ainlay" style="width:100%">
+            </div>
+            <div class="column">
+              <img src="https://cdn.discordapp.com/attachments/818605816948588554/1011300894366765127/bruda.jpg" alt="Jerry" style="width:100%">
+            </div>
+          </div>
+          <div>
+            <table class = "centertable" style = "overflow-x:auto">
+                <tr>
+                    <th>Name</th>
+                    <th>School</th>
+                    <th>Age</th>
+                    <th>Sibling</th>
+                  </tr>
+                  <tr>
+                    <td><p>Austin Bao</p></td>
+                    <td><p>Harry Ainlay</p></td>
+                    <td><p>16</p></td>
+                    <td><p>Brother</p></td>
+                  </tr>
+            </table>
+          </div>
+    </body>
+</html>

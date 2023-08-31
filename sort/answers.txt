@@ -1,0 +1,13 @@
+sort1 uses: Bubble
+
+How do you know?: The run time to sort random and reversed numbers was the slowest, but was faster at sorting an already sorted list compared sort3 which allows me to distinguish it from Selection sort. These times makes sense with the method used in Bubble sorting
+since in the reversed and random text, it would have to iterate through the text mutliple times, while on the sorted text, it simply needed to iterate through one time.
+
+sort2 uses: Merge
+
+How do you know?: Was always the fastest in sorting each text file which makes sense since merge sort has a time complexity of O(n*Log n), which is faster than both Bubble and Selection search who both have a O(n^2) time complexity.
+
+sort3 uses: Selection
+
+How do you know?: Sort 3 is Selection sort since it maintained a consistent 4 to 5 second run time throughout each text file. This decision is backed again by the fact that despite what you throw at a selection sort, it will always
+be essentially doing the same thing, starting on the left hand side and looping through the rest of the elements.

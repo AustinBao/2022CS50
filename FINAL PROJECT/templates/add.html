@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+    Add
+
+{% endblock %}
+
+{% block main %}
+
+<h2>Add friend</h2>
+
+<div class="container">
+    <form action="/add" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="name" name="name" placeholder="Name" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+</div>
+
+<hr>
+
+<h2>Names of Users</h2>
+<div>
+    <dl>
+        {% for dict in items %}
+            <dt>{{ dict.name }}</dt>
+            <dd> Grade {{ dict.grade }}, Program {{ dict.program }}</dd>
+        {% endfor %}
+    </dl>
+</div>
+
+{% endblock %}

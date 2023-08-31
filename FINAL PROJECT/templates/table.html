@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+    Tables
+
+{% endblock %}
+
+
+{% block main %}
+
+<div class="container">
+
+    <h1 class="text-center">Time Table</h1>
+
+    <form action="/table" method="post">
+        <select class="form-select mx-auto w-auto" name="day">
+            <option disabled selected>Select Day</option>
+                <tr>
+                    <option value="dayOne">Day 1</option>
+                    <option value="dayTwo">Day 2</option>
+                </tr>
+        </select>
+
+
+        <hr>
+
+
+        <div class="row">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="period1" name="period1" placeholder="Period 1" type="text">
+            </div>
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="period2" name="period2" placeholder="Period 2" type="text">
+            </div>
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="period3" name="period3" placeholder="Period 3" type="text">
+            </div>
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="period4" name="period4" placeholder="Period 4" type="text">
+            </div>
+            <div>
+                <button class="btn btn-primary" name="addtable" type="submit">Add Table</button>
+            </div>
+        </div>
+    </form>
+    <hr>
+</div>
+
+
+
+{% endblock %}
